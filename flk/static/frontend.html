@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel = "stylesheet" href = "../static/stylee.css"></link>
+        <link rel="shortcut icon" href="#">
+        <title>HOMEWORK 2</title>
+    </head>
+
+    <body>
+
+        <section class = "formSection">
+            <div class = "header">
+                <a href= "https://ebay.com" target = "_blank" ><img src="../static/images/eBayLogo.png" alt="ebay" class="ebay"></a>
+                <span class="shopping-text">Shopping</span>
+            </div>
+            <form class="shopping-form">
+                <!-- Keyword input field -->
+                <div class="form-row">
+                    <label class="main-label" for="keyword">Keywords<sup class="keyword-superscript">*</sup>:</label>
+                    <input type="text" id="keyword" name="keyword" required>
+                </div>
+                <hr>
+                <!-- Range input fields -->
+                <div class="form-row">
+                    <label class="main-label">Price Range:</label>
+                    <label>From</label>
+                    <input type="number" id="rangeFrom" name="rangeFrom">
+                    <label>to</label>
+                    <input type="number" id="rangeTo" name="rangeTo">
+                </div>
+                <hr>
+                <!-- Condition checkboxes -->
+                <div class="form-row">
+                    <label class="main-label">Condition:</label>
+                    <input type="checkbox" id="new" name="condition" value="1000">
+                    <label for="new">New</label>
+                    <input type="checkbox" id="used" name="condition" value="3000">
+                    <label for="used">Used</label>
+                    <input type="checkbox" id="vgood" name="condition" value="4000">
+                    <label for="vgood">Very Good</label>
+                    <input type="checkbox" id="good" name="condition" value="5000">
+                    <label for="good">Good</label>
+                    <input type="checkbox" id="acceptable" name="condition" value="6000">
+                    <label for="acceptable">Acceptable</label>
+                </div>
+                <hr>
+                <!-- Seller checkboxes -->
+                <div class="form-row">
+                    <label class="main-label">Seller:</label>
+                    <input type="checkbox" id="return" name="seller" value="ReturnsAccepted">
+                    <label for="return">Return Accepted</label>
+                </div>
+                <hr>
+                <!-- Shipping checkboxes -->
+                <div class="form-row">
+                    <label class="main-label">Shipping:</label>
+                    <input type="checkbox" id="free" name="shipping" value="FreeShipping">
+                    <label for="free">Free</label>
+                    <input type="checkbox" id="expedited" name="shipping" value="Expedited">
+                    <label for="expedited">Expedited</label>
+                </div>
+                <hr>
+                <!-- Sort By dropdown -->
+                <div class="form-row">
+                    <label class="main-label" for="sortBy">Sort By:</label>
+                    <select id="sortBy" name="sortBy">
+                        <option value="BestMatch">Best Match</option>
+                        <option value="CurrentPriceHighest">Price: highest first</option>
+                        <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
+                        <option value="PricePlusShippingLowest">Price + Shipping: lowest first</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <hr>
+                <!-- Clear and Submit buttons -->
+                <div class="form-row">
+                    <input type="reset" value="Clear" class="clear">
+                    <input type="submit" value="Search">
+                </div>
+            </form>
+            <!-- End of the form -->
+        </section>
+        <section class="resultsSection"></section>
+        <section class="space"></section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../static/script.js"></script>
+
+    </body>
+
+</html>

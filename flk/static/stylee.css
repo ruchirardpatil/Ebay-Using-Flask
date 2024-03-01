@@ -1,0 +1,291 @@
+body, html {
+    height: 100%; /* Ensure the body takes up the full viewport height */
+    margin: 0; /* Reset default margin */
+    font-family: serif;
+}
+
+.formSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.ebay {
+    height: 65px;
+    width: auto;
+    margin-right: 10px; /* Space between the logo and text */
+}
+
+.shopping-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.shopping-form {
+    width: 490px;
+    /* width: 100%; */
+    /* max-width: 535px; */
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 15px; */
+    padding: 5px 0;
+    width: calc(100% - 40px); /* Adjust width considering the 20px padding from both sides */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row label {
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.main-label{
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d0d0d0; /* A lighter gray than the border */
+    width: 100%; 
+    margin: 0 auto;
+}
+
+input[type="checkbox"] + label {
+    margin-left: 1px;  /* Adjust this value according to your preference */
+}
+
+#rangeFrom, #rangeTo {
+    width: 50px;  /* Adjust this value as per your requirement */
+}
+
+.clear {
+    margin-right: 10px; /* You can adjust this value based on the amount of spacing you desire */
+}
+
+.keyword-superscript {
+    color: red;
+    font-size: 0.9em; /* Adjust if you want a smaller or larger asterisk */
+}
+#sortBy {
+    text-align-last: center; /* For Firefox */
+    text-align: center; /* For other browsers */
+}
+/* Initial button styles */
+input[type="reset"], input[type="submit"] {
+    transition: background-color 0.3s ease; /* Smooth transition for the hover effect */
+    border: none;
+    border-radius: 5px; /* This will curve the borders */
+    padding: 5px 5px;
+    background-color: #8080804a;
+}
+
+/* Hover effect */
+input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: rgb(82, 227, 82);
+    color: white;
+}
+
+.resultsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+/* eBay Item Styles */
+.item {
+    display: flex;
+    background-color: #0606060d;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 2px 0;
+    width: 90%; /* or adjust to your desired width */
+    max-width: 700px; /* or adjust to your desired max-width */
+    border: 0.5px solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* horizontal offset, vertical offset, blur radius, shadow color */
+    transition: box-shadow 0.3s ease;
+    border-radius: 5px;
+}
+
+.item:hover{
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item-image {
+    width: 30%; /* Adjust this if needed */
+    max-width: 120px; 
+    height: 120px; /* Fixed height for consistency */
+    margin-right: 20px; /* Space between the image and the item details */
+    margin-left: 5px; /* Small space on the left of the image */
+    /* overflow: hidden;  */
+    position: relative;
+}
+
+.item-image img {
+    width: auto; /* Ensure the image takes the full width of its container */
+    height: auto; /* Ensure the image takes the full height of its container */
+    object-fit: contain; /* Adjust the image size to cover the set dimensions */
+    transition: transform 0.5s ease; /* Smooth transition for the zoom effect */
+    border: 1.5px solid grey; /* Adding the grey border */
+    position: relative;
+    z-index: 1;
+    /* margin-top: 25px; */
+}
+
+.item:hover .item-image img {
+    z-index: 2;  
+}
+
+.item-image img:hover {
+    transform: scale(1.8); /* Zoom effect on hover */
+}
+
+.item-details {
+    width: 70%; /* adjust this value based on your design requirements */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    padding-left: 20px;
+}
+
+.item-details h3 {
+    font-size: 1.0em;
+    margin-bottom: 5px;
+    white-space: nowrap; /* Prevents the text from wrapping onto the next line */
+    overflow: hidden; /* Hides any text that overflows the container */
+    text-overflow: ellipsis;
+    margin-top: 0px;
+}
+
+.item-details p {
+    margin: 3px 0;
+}
+
+.top_rated_img {
+    height: 2em;
+    vertical-align: middle;
+    padding-left: 4px;
+}
+
+#showMoreLess {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px; /* This will curve the borders */
+    padding: 5px 5px;
+    background-color: #8080804a;
+}
+#showMoreLess:hover {
+    background-color: rgb(82, 227, 82);
+    color: white;
+}
+
+.item-details > * {
+    padding-bottom: 15px;
+}
+
+/* To reset margin for the last child to maintain uniformity */
+.item-details > *:last-child {
+    margin-bottom: 0px;
+    font-weight: bold;
+    padding-bottom: 0px;
+}
+
+.detail-table {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 20px auto; /* give it some vertical spacing from surrounding content */
+    border: 1px solid #ccc; /* border */
+    padding: 0; /* inner spacing */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow for depth */
+    border-radius: 5px; /* rounding corners for a more polished look */
+}
+
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding:  0; /* increased padding for better spacing */
+    border-bottom: 1px solid #ccc;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-key {
+    flex: 0.25; /* take up half the space */
+    padding-right: 15px; /* space before the border */
+    border-right: 1px solid #ccc; /* vertical separator */
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex; /* makes it a flex container */
+    align-items: center; /* vertically centers the direct children */
+    justify-content: flex-start; 
+}
+
+.detail-value {
+    flex: 0.75; /* take up half the space */
+    padding-left: 15px;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex; /* makes it a flex container */
+    align-items: center; /* vertically centers the direct children */
+    justify-content: flex-start;  /* space after the border */
+}
+
+.detail-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* maintain image's aspect ratio */
+}
+
+.redirect_img{
+    color:gray;
+    height: 1.0em;
+}
+
+.result_hr{
+    width:742px;
+    padding-bottom: 10px;
+}
+.space{
+    padding-top:50px;
+}
+#backToSearch{
+    border: none;
+    border-radius: 5px; /* This will curve the borders */
+    padding: 5px 5px;
+    background-color: #8080804a;
+}
+#backToSearch:hover {
+    background-color: rgb(82, 227, 82);
+    color: white;
+}
+.item_detail{
+    font-size: 35px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.nores{
+    margin-top: 50px;
+}
